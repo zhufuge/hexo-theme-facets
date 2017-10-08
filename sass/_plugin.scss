@@ -1,0 +1,79 @@
+#ds-thread {
+  #ds-reset {
+    padding-top: 50px;
+
+    .ds-like-thread-button {
+      border: 1px solid #ddd;
+      background: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+
+      &:hover,
+      &:focus {
+        background: #428bca !important;
+
+        .ds-thread-like-text {
+          color: white;
+        }
+      }
+    }
+
+    li.ds-tab a.ds-current {
+      border: 1px solid #ddd;
+      background: none !important;
+      box-shadow: none;
+      text-shadow: none;
+    }
+
+    .ds-post:hover {
+      background:#eee !important;
+    }
+
+    .ds-textarea-wrapper {
+      textarea {
+        background: #fff url("http://odjmen8gh.bkt.clouddn.com/cloud.jpg") right no-repeat;
+      }
+    }
+
+    .ds-post-options {
+      background: none;
+    }
+
+    .ds-post-button {
+      background: none !important;
+      height: 31px !important;
+
+      &:hover {
+        background-color: #428bca !important;
+        color: white !important;
+      }
+    }
+
+    .ds-avatar {
+      background:none !important;
+      box-shadow:none !important;
+
+      img {
+        width:50px !important;
+        height: 50px !important;
+        transition: .8s;
+        padding:3px;
+        border: 1px solid #ddd;
+        background: #fff;
+
+        &:hover {
+          transform:rotate(720deg);
+          border-radius:30px !important;
+        }
+      }
+    }
+
+    .ds-comment-body {
+      padding-left:70px !important;
+    }
+
+    .ds-replybox {
+      padding: 0 0 0 80px !important;
+    }
+  }
+}

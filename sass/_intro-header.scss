@@ -1,0 +1,109 @@
+.intro-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #808080;
+  background-attachment: scroll;
+  background-size: cover;
+  background-image: url('http://odjmen8gh.bkt.clouddn.com/92d91af2689ce624e366d7a3bf733135.jpg');
+  height: 300px;
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .container{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 55px 15px 15px;
+  }
+
+  .site-heading,
+  .page-heading,
+  .post-heading{
+    color: #fff;
+
+    h1 {
+      text-shadow: 0 0 40px black;
+    }
+  }
+  .site-heading,
+  .page-heading,{
+    .subheading {
+      font-size: 18px;
+      line-height: 1.1;
+      display: block;
+      font-weight: 300;
+      margin: 10px 0 0;
+    }
+  }
+
+  .site-heading {
+    .about-me img{
+      width: 120px;height: 120px;
+      border-radius: 50%;
+      opacity: .9;
+    }
+
+    h5 a{
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0;
+      color: #eee;
+      font-size: 15px;
+    }
+  }
+
+  .post-heading {
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .subheading {
+      font-size: 30px;
+      line-height: 1.4;
+      margin-bottom: 0;
+      text-shadow: 0 0 40px black;
+    }
+
+    .meta {
+      font-weight: 300;
+      font-size: 14px;
+      color: #eee;
+
+      span {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .intro-header {
+    height: 370px;
+
+    .post-heading {
+      h1 {
+        margin-top: 0;
+        font-size: 36px;
+      }
+
+      .subheading{
+        font-size: 26px;
+        margin:0;
+        font-weight: 300;
+      }
+
+      .meta {
+        font-size: 16px;
+      }
+    }
+  }
+}

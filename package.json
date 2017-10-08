@@ -1,0 +1,9 @@
+{
+  "name": "hexo-theme-facets",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://gihub.com/zhufuge/hexo-theme-facets",
+  "author": "zhufuge",
+  "license": "Apache-2.0",
+  "private": true
+}

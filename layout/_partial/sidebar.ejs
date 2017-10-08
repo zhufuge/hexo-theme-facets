@@ -1,0 +1,27 @@
+<section class="visible-md visible-lg">
+    <div class="short-about">
+        <% if(config['sidebar-avatar']) { %>
+            <img src="<%= config['sidebar-avatar'] %>"/>
+        <% } %>
+        <h5>
+            <a href="<%= config.root %>about/">
+                <%= config.author %>
+            </a>
+        </h5>
+        <% if(config['sidebar-about-description']) { %>
+            <p>
+                <%= config['sidebar-about-description'] %>
+            </p>
+        <% } %>
+        <hr>
+        <!-- SNS Link 社交 -->
+        <%- partial('link', {link_class: "list-inline"}) %>
+
+        <div class="tags">
+            <% site.tags.map(function(tag){ %>
+                <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
+                   rel="<%= tag.length %>"><%= tag.name %></a>
+            <% }) %>
+        </div>
+    </div>
+</section>

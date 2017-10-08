@@ -1,0 +1,22 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <!-- sns link 社交 -->
+                <%- partial('link', {link_class: "list-inline text-center"}) %>
+                <p class="copyright text-muted">
+                    Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap Core JavaScript -->
+<%- js('js/bootstrap.min.js') %>
+
+<!-- Custom Theme JavaScript -->
+<%- js('js/blog.js') %>
