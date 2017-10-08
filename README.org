@@ -1,7 +1,9 @@
-#+TITLE: 试着重构主题代码
-#+AUTHOR: 6ml
-#+DATE: <2016-09-19 周一 18:58>
+#+TITLE: hexo-theme-facets
+#+AUTHOR: zhufuge
+#+DATE: <2017-10-08 周日 22:38>
 
-很喜欢这个主题，但是代码有点乱，想做点改动都觉得无从下手，所以重构一下。
+Folk from [[https://github.com/Haojen/hexo-theme-Anisina][Haojen/hexo-theme-Anisina]] .
 
-重构的过程，也是学习的过程。
+I want to rewrite it by vue.
+
+Maybe do it with TypeScript, If I can.
