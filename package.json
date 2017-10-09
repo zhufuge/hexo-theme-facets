@@ -5,5 +5,12 @@
   "repository": "https://gihub.com/zhufuge/hexo-theme-facets",
   "author": "zhufuge",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "run-sass": "node-sass -w -r --source-map true facets.scss source/index.css",
+    "build-sass": "node-sass --source-map true facets.scss source/index.css"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
 }

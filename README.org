@@ -2,8 +2,6 @@
 #+AUTHOR: zhufuge
 #+DATE: <2017-10-08 周日 22:38>
 
-Folk from [[https://github.com/Haojen/hexo-theme-Anisina][Haojen/hexo-theme-Anisina]] .
-
 I want to rewrite it by vue.
 
 Maybe do it with TypeScript, If I can.

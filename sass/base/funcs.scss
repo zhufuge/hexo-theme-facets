@@ -1,0 +1,29 @@
+@function flex-pos($s) {
+  @if $s == c {
+    @return center;
+  } @else if $s == s {
+    @return start;
+  } @else if $s == e {
+    @return end;
+  } @else if $s == sa {
+    @return space-around;
+  } @else if $s == sb {
+    @return space-between;
+  }
+}
+
+@function flex-dire($d) {
+  @if $d == r {
+    @return row;
+  } @else if $d == c {
+    @return column;
+  }
+}
+
+
+@mixin flex($d, $j, $a) {
+  display: flex;
+  flex-direction: flex-dire($d);
+  justify-content: flex-pos($j);
+  align-items: flex-pos($a);
+}

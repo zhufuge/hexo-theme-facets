@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <!-- Head tag -->
-    <%- partial('_partial/head') %>
+  <!-- Head tag -->
+  <%- partial('_partial/head') %>
+  <body>
+    <!-- Header -->
+    <%- partial('_partial/header') %>
 
-    <!-- hack iOS CSS :active style -->
-    <body ontouchstart="" class="animated fadeIn">
-        <!-- Header -->
-        <%- partial('_partial/header') %>
+    <!-- Main Content -->
+    <section id="main"><%- body %></section>
 
-        <!-- Main Content -->
-        <section id="main"><%- body %></section>
-
-        <!-- Footer -->
-        <%- partial('_partial/footer') %>
-    </body>
+    <!-- Footer -->
+    <%- partial('_partial/footer') %>
+  </body>
 </html>

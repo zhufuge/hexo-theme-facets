@@ -1,0 +1,6 @@
+footer {
+  @include flex(c, c, c);
+  margin: 50px 0;
+  color: $GREY600;
+  font-weight: 300;
+}
