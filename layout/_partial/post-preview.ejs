@@ -1,6 +1,7 @@
 <div class="post-preview"
      <% if (img) { %>
-     style="background-image: url('<%- post["header-img"] || config["post-default-img"] %>')"
+     style="background-image: url('<%- post["header-img"] ||
+                                   config["post-default-img"] %>')"
      <% } %>>
     <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">

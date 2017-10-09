@@ -9,7 +9,9 @@
                 col-sm-12 col-xs-12
                 post-container">
       <% page.posts.each(function(post){ %>
-        <%- partial('_partial/post-preview', {post: post, img: true, content: true}) %>
+        <%- partial('_partial/post-preview',
+          {post: post, img: true, content: true}
+        ) %>
       <% }); %>
       <!-- 翻页 -->
       <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
