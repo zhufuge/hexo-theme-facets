@@ -12,3 +12,7 @@ a {
     color: $MAIN1;
   }
 }
+
+.img-container {
+  @include flex(c, c, c);
+}

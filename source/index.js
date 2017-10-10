@@ -11,26 +11,32 @@
     '#FF9A6E',
     '#F97872',
     '#FEF1C4',
-    '#FFFFF8',
-    '#FFD3E7',
-    '#FDFFFE',
     '#FE9099',
     '#FC8370',
     '#F9637C',
     '#FC7281',
     '#F9737C',
+    '#FFD3E7',
+    '#FDFFFE',
   ]
 
+  const width = window.innerWidth,
+        isMobile = width < 992
+
   const pattern = Trianglify({
-    width: window.innerWidth,
-    height: 70,
+    width: width,
+    height: isMobile ? 336 : 64,
     cell_size: 32,
     variance: 1,
     x_colors: colors,
-    y_colors: [1, 2, 6, 0].map(v => colors[v]),
+    y_colors: (
+      isMobile ? [1, 2, 3, 2, 6, 8, 0] : [1, 2, 6, 0]
+    ).map(v => colors[v]),
   })
 
-  document.body.getElementsByTagName('header')[0].style.background =
-    `url(${pattern.canvas().toDataURL()})`
+  const container = isMobile
+        ? document.getElementsByClassName('short-about')[0]
+        : document.body.getElementsByTagName('header')[0]
 
+  container.style.background = `url(${pattern.canvas().toDataURL()})`
 })()

@@ -1,28 +1,34 @@
-<!-- Page Header -->
-<%- partial('_partial/mobile_page_header') %>
-
 <!-- Main Content -->
-<div class="container index">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12 col-xs-12
-                post-container">
-      <% page.posts.each(function(post){ %>
-        <%- partial('_partial/post-preview',
-          {post: post, img: true, content: true}
-        ) %>
-      <% }); %>
-      <!-- 翻页 -->
-      <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
-    </div>
-    <!-- Sidebar Container -->
-    <div class="col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12 col-xs-12
-                sidebar-container
-                ">
-      <%- partial('_partial/sidebar') %>
-    </div>
+<div id="index">
+
+  <!-- Content -->
+  <div id="index-content">
+    <% page.posts.each(function(post){ %>
+      <%- partial('_partial/post-preview',
+        {post: post, img: true, content: true}
+      ) %>
+    <% }); %>
+    <!-- 翻页 -->
+    <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
   </div>
+
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="short-about">
+      <div class="img-container">
+        <img src="<%= config.sidebar_avatar || url_for('0.png') %>"/>
+      </div>
+      <a href="<%= config.root %>about/">
+        <%= config.author %>
+      </a>
+      <p><%= config.facets_description || '' %></p>
+    </div>
+    <div class="tags">
+      <% site.tags.map(function(tag){ %>
+        <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
+          rel="<%= tag.length %>"><%= tag.name %></a>
+      <% }) %>
+    </div>
+  </section>
+
 </div>
