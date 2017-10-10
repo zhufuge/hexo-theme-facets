@@ -1,5 +1,9 @@
 @import "../global/_all";
 
+body {
+  background: #FEFEC3;
+}
+
 a {
   text-decoration: none;
   color: $MAIN1;
@@ -15,4 +19,11 @@ a {
 
 .img-container {
   @include flex(c, c, c);
+}
+
+.divider {
+  margin: 24px 0;
+  height: 1px;
+  width: 100%;
+  background: $GREY400;
 }

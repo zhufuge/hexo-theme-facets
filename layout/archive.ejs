@@ -1,25 +1,7 @@
-<header class="intro-header" style="background-image: url('http://ocnnxadky.bkt.clouddn.com/16-9-11/335924.jpg');">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1><%= page.title || config.title %></h1>
-                    <span class="subheading"><%= page.description || config.subtitle || "" %></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <% page.posts.each(function(post){ %>
-                <%- partial('_partial/post-preview', {post: post, img: false, content: false}) %>
-            <% }); %>
-            <!-- 翻页 -->
-            <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
-        </div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     </div>
+  </div>
 </div>

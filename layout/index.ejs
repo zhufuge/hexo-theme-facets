@@ -1,34 +1,22 @@
 <!-- Main Content -->
 <div id="index">
+  <div class="about-card">
+    <div class="img-container">
+      <%- image_tag('0.png', {width: 180, height: 180}) %>
+    </div>
+    <a href="<%= config.root %>about/">
+      <%= config.author %>
+    </a>
+    <p><%= config.facets_description || '' %></p>
+  </div>
 
   <!-- Content -->
   <div id="index-content">
     <% page.posts.each(function(post){ %>
-      <%- partial('_partial/post-preview',
-        {post: post, img: true, content: true}
-      ) %>
+      <%- partial('_partial/post-preview', {post: post, excerpt: true}) %>
     <% }); %>
     <!-- 翻页 -->
     <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
   </div>
-
-  <!-- Sidebar -->
-  <section id="sidebar">
-    <div class="short-about">
-      <div class="img-container">
-        <img src="<%= config.sidebar_avatar || url_for('0.png') %>"/>
-      </div>
-      <a href="<%= config.root %>about/">
-        <%= config.author %>
-      </a>
-      <p><%= config.facets_description || '' %></p>
-    </div>
-    <div class="tags">
-      <% site.tags.map(function(tag){ %>
-        <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
-          rel="<%= tag.length %>"><%= tag.name %></a>
-      <% }) %>
-    </div>
-  </section>
 
 </div>

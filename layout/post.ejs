@@ -1,31 +1,4 @@
-<!--only post-->
-<header class="intro-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-        <div class="post-heading">
-          <h1><%= page.title %></h1>
-          <% if(page.subtitle) { %>
-            <h2 class="subheading"><%= page.subtitle %></h2>
-          <% } %>
-          <span class="meta">
-            作者 <%- page.author || config.author %>
-            <span>
-              日期 <%= page.date.format(config.date_format) %>
-            </span>
-          </span>
-          <div class="tags text-center">
-            <% page.tags.forEach(function(tag){ %>
-              <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>"
-                 title="<%= tag.name %>"><%= tag.name %></a>
-            <% }) %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
+<!-- Post -->
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">

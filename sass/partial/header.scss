@@ -1,6 +1,6 @@
 @import "../global/_all";
 
-body > header {
+header {
   position: fixed;
   top: 0;
   z-index: 100;
@@ -17,7 +17,7 @@ body > header {
     height: 2px;
     position: absolute;
     width: 100%;
-    background: red;
+    background: $MAIN2;
   }
 
   a {
@@ -41,7 +41,7 @@ body > header {
 
   .container {
     height: 100%;
-    @include flex(r, s, c);
+    @include flex(r, sb, c);
 
     margin: 0 15px;
     font-size: 14px;

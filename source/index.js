@@ -35,7 +35,7 @@
   })
 
   const container = isMobile
-        ? document.getElementsByClassName('short-about')[0]
+        ? document.getElementsByClassName('about-card')[0]
         : document.body.getElementsByTagName('header')[0]
 
   container.style.background = `url(${pattern.canvas().toDataURL()})`
