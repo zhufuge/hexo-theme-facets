@@ -1,5 +1,7 @@
 <!-- Main Content -->
 <div id="index">
+
+  <!-- Short about card -->
   <div class="about-card">
     <div class="img-container">
       <%- image_tag('0.png', {width: 180, height: 180}) %>
@@ -15,8 +17,10 @@
     <% page.posts.each(function(post){ %>
       <%- partial('_partial/post-preview', {post: post, excerpt: true}) %>
     <% }); %>
+
     <!-- 翻页 -->
     <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
+
   </div>
 
 </div>

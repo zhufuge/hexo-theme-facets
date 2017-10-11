@@ -1,0 +1,45 @@
+@import "../global/_all";
+
+
+.pager {
+  @include flex(r, c, c);
+  overflow: hidden;
+
+  .previous {
+    @include flex(r, c, c);
+    margin: 6px;
+  }
+
+  .next {
+    @extend .previous;
+  }
+
+  a {
+    @include flex(r, c, c);
+
+    padding: 16px 22px;
+    border: 2px solid rgba($GREY400, 0.6);
+    font-size: 18px;
+    font-weight: 600;
+    color: $GREY900;
+    .icon {
+      background: $GREY900;
+    }
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      background: #FE917D;
+      border: 2px solid #FE917D;
+      color: #FEFEC3;
+
+      .icon {
+        background: #FEFEC3;
+      }
+    }
+
+    span {
+      padding: 0 6px;
+    }
+  }
+
+}

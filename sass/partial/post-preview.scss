@@ -5,30 +5,13 @@ $date-size: 14px;
 
 @mixin post-link {
   color: #FE917D;
-
   &:hover, &:focus, &:active {
-    text-decoration: none;
     color: #FE677E;
-    background: rgba($GREY500, 0.1);
-    border-radius: 3px;
   }
 }
 
 .post-preview {
-  overflow: hidden;
-
-  .post-more {
-    @include post-link;
-    display: block;
-    margin-top: 12px;
-    font-size: 18px;
-  }
-
   .post-title {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     font-size: 28px;
     @include post-link;;
   }
@@ -37,20 +20,34 @@ $date-size: 14px;
     color: $date-color;
     font-size: $date-size;
     margin: 8px;
+
+    span {
+      margin-left: 3px;
+    }
+  }
+
+  .post-cate {
+    @extend .post-date;
   }
 
   .post-content-preview {
     font-size: 16px;
     color: $GREY700;
   }
-}
 
+  .post-more {
+    @include flex(r, e, s);
+    font-size: 18px;
+    margin: 0 24px;
+    a {
+      @include post-link;
+    }
+  }
 
-i.icon-calendar {
-  display: inline-block;
-  mask-image: url(svg/calendar.svg);
-  mask-size: $date-size;
-  width: $date-size;
-  height: $date-size;
-  background-color: $date-color;
+  .icon {
+    mask-size: $date-size;
+    width: $date-size;
+    height: $date-size;
+    background: $date-color;
+  }
 }
