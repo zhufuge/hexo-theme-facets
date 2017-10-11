@@ -153,6 +153,9 @@ i.icon-arrow-right {
   margin: 24px 0;
   padding: 0 15px; }
 
+.header-shadow {
+  box-shadow: 0 0 10px rgba(33, 33, 33, 0.48); }
+
 header {
   position: fixed;
   top: 0;
@@ -188,11 +191,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 15px;
+    padding: 0 15px;
     font-size: 14px; }
     @media (min-width: 768px) {
       header .container {
-        margin: 0 100px;
+        padding: 0 100px;
         font-size: 16px; } }
 
 body > footer {
