@@ -1,36 +1,34 @@
 <div class="pager">
-  <% if (type == 'post') { %>
+  <div class="previous">
     <% if (page.prev){ %>
-      <div class="previous">
-        <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top"
-          title="<%- page.prev.title %>">&larr; Previous Post</a>
-      </div>
-    <% } %>
-    <% if (page.next){ %>
-      <div class="next">
-        <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
-          title="<%- page.next.title %>">Next Post &rarr;</a>
-      </div>
-    <% } %>
-  <% } %>
-
-  <% if (type == 'index') { %>
-    <div class="previous">
-      <% if (page.prev){ %>
-        <a href="<%- url_for(page.prev_link) %>">
+      <% if (type == 'post') { %>
+        <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
           <i class="icon-arrow-left icon"></i>
-          <span>Newer</span>
+          <span>PREV</span>
         </a>
       <% } %>
-    </div>
-    <div class="next">
-      <% if (page.next){ %>
+      <% if (type == 'index') { %>
+        <a href="<%- url_for(page.prev_link) %>">
+          <i class="icon-arrow-left icon"></i>
+          <span>NEWER</span>
+        </a>
+      <% } %>
+    <% } %>
+  </div>
+  <div class="next">
+    <% if (page.next){ %>
+      <% if (type == 'post') { %>
+      <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
+        <span>NEXT</span>
+        <i class="icon-arrow-right icon"></i>
+      </a>
+      <% } %>
+      <% if (type == 'index'){ %>
         <a href="<%- url_for(page.next_link) %>">
-          <span>Older</span>
+          <span>OLDER</span>
           <i class="icon-arrow-right icon"></i>
         </a>
       <% } %>
-    </div>
-  <% } %>
-
+    <% } %>
+  </div>
 </div>

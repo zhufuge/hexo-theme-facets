@@ -1,54 +1,46 @@
 import triCanvas from './trianglify-canvas'
 
-const header = document.querySelector('header')
+const header = document.querySelector('header'),
+      container = header.children[0]
 
 const headerNode = {
   node: header,
-  container: header.children[0],
+  container: container,
   state: {
-    isShowStyle: false,
+    style: false,
     scroll: window.scrollY,
   },
   init: function() {
-    if (this.container.classList.contains('header-shadow')) {
-      this.setCanvas(true)
+  },
+  onScroll: function(scroll) {
+    this.showStyle(scroll > 336 - 56)
+
+    if (scroll > 336 && Math.abs(scroll - this.state.scroll) > 56) {
+      this.runAnimate(scroll > this.state.scroll)
+      this.state.scroll = scroll
     }
   },
-  setShowStyleState: function(state) {
-    if (state !== this.state.isShowStyle) {
-      if (state) {
+  showStyle: function(style) {
+    if (style !== this.state.style) {
+      if (style) {
         this.container.classList.add('header-shadow')
       } else {
         this.container.classList.remove('header-shadow')
       }
-      this.setCanvas(state)
+      this.canvas(style)
     }
-    this.state.isShowStyle = state
+    this.state.style = style
   },
-  setCanvas: function(isShow) {
+  canvas: function(canvas) {
     this.container.setAttribute(
       'style',
-      isShow
+      canvas
         ? 'background-image: url(\'' + triCanvas + '\'); ' +
         'background-position: bottom;'
         : ''
     )
   },
-  setScroll: function(scroll) {
-    this.setShowStyleState(scroll > 336 - 56)
-
-    if (scroll > 336) {
-      this.node.classList.add('animated')
-    } else {
-      this.node.classList.remove('animated')
-    }
-
-    if (Math.abs(scroll - this.state.scroll) > 56) {
-      this.setSlide(scroll > this.state.scroll)
-      this.state.scroll = scroll
-    }
-  },
-  setSlide: function(isOutUp) {
+  runAnimate: function(isOutUp) {
     this.node.classList.add('slideInDown', 'slideOutUp')
     if (isOutUp) {
       this.node.classList.replace('slideInDown', 'slideOutUp')
@@ -61,5 +53,5 @@ const headerNode = {
 headerNode.init()
 
 window.addEventListener('scroll', function() {
-  headerNode.setScroll(window.scrollY)
+  headerNode.onScroll(window.scrollY)
 })

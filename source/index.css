@@ -99,6 +99,15 @@ a:active {
   color: #0085a1;
 }
 
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 336px;
+}
+
 .img-container {
   display: flex;
   flex-direction: column;
@@ -151,6 +160,194 @@ i.icon-arrow-up {
   mask-size: 24px;
   width: 24px;
   height: 24px;
+}
+
+article {
+  font-size: 16px;
+  color: #424242;
+  width: 100%;
+}
+
+article p {
+  margin: 12px 0;
+  line-height: 2;
+}
+
+article ul {
+  list-style: disc;
+  margin-left: 32px;
+}
+
+article ol {
+  margin-left: 32px;
+}
+
+article li {
+  line-height: 1.8;
+}
+
+article h1, article h2, article h3 {
+  width: 100%;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #BDBDBD;
+}
+
+article h2 {
+  margin: 42px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+article h3 {
+  margin: 32px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+dl {
+  margin: 10px 0;
+}
+
+dd, dt {
+  line-height: 1.42857143;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+figure.highlight {
+  background: rgba(224, 224, 224, 0.6);
+  border-radius: 3px;
+  border: 1px solid #FEFEC3;
+  text-shadow: 0 0 1px #fff;
+  line-height: 1.6;
+  overflow: auto;
+  position: relative;
+  font-size: 0.9em;
+  margin: 12px 0;
+}
+
+figure.highlight figcaption {
+  color: black;
+  margin-bottom: 5px;
+  text-shadow: 0 0 1px #fff;
+}
+
+figure.highlight figcaption a {
+  position: absolute;
+  right: 15px;
+}
+
+figure.highlight table {
+  margin-top: 0;
+  border-spacing: 0;
+}
+
+figure.highlight .gutter {
+  color: black;
+  padding-right: 15px;
+  border-right: 2px solid #FEFEC3;
+  text-align: right;
+}
+
+figure.highlight .line {
+  height: 20px;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+pre span.line {
+  display: inline-block;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .pi,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+pre .keyword,
+pre .winutils,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .request,
+pre .status,
+pre .nginx .title {
+  color: #859900;
+}
+
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+
+pre .title,
+pre .localvars,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .identifier,
+pre .vhdl,
+pre .literal,
+pre .id {
+  color: #268bd2;
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .type {
+  color: #b58900;
+}
+
+pre .preprocessor,
+pre .preprocessor .keyword,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata,
+pre .clojure .title {
+  color: #cb4b16;
+}
+
+pre .deletion {
+  color: #dc322f;
+}
+
+pre .gutter {
+  width: 70px;
 }
 
 .animated {
@@ -227,17 +424,11 @@ i.icon-arrow-up {
   animation-name: slideOutUp;
 }
 
-.about-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  width: 100%;
-  height: 336px;
+#index .about-card {
   font-size: 16px;
 }
 
-.about-card .img-container {
+#index .about-card .img-container {
   margin-top: 24px;
   width: 180px;
   height: 180px;
@@ -246,22 +437,22 @@ i.icon-arrow-up {
   overflow: hidden;
 }
 
-.about-card .img-container:hover {
+#index .about-card .img-container:hover {
   box-shadow: 0 0 10px white;
 }
 
-.about-card a {
+#index .about-card a {
   margin: 8px auto 6px;
   font-size: 1em;
   font-weight: 600;
   color: #424242;
 }
 
-.about-card a:hover, .about-card a:focus, .about-card a:active {
+#index .about-card a:hover, #index .about-card a:focus, #index .about-card a:active {
   color: white;
 }
 
-.about-card p {
+#index .about-card p {
   margin-bottom: 36px;
   color: #616161;
 }
@@ -269,6 +460,11 @@ i.icon-arrow-up {
 #index-content {
   margin: 24px 0;
   padding: 0 15px;
+}
+
+#post .post-content {
+  margin: 12px 0;
+  padding: 0 12px;
 }
 
 .header-shadow {
