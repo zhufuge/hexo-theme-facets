@@ -1,5 +1,5 @@
 <header>
-  <div class="container">
+  <div class="container<%= is_home() ? '' :  ' header-shadow'%>">
     <a href="<%= config.root %>">
       <span>
         <%= config.facets_author %>

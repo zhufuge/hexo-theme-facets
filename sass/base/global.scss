@@ -28,7 +28,7 @@ a {
   background: rgba($GREY400, 0.6);
 }
 
-$icons: calendar, folder, arrow-left, arrow-right;
+$icons: calendar, folder, arrow-left, arrow-right, arrow-up;
 
 @each $icon in $icons {
   i.icon-#{$icon} {

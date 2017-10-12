@@ -42,7 +42,7 @@ function setTriCanvas() {
 
   triCanvas = pattern
 
-  if (isMobile) {
+  if (isMobile && about_card) {
     about_card.style.background = 'url("' + pattern + '")'
   }
 }

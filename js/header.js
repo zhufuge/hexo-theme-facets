@@ -5,26 +5,35 @@ const header = document.querySelector('header')
 const headerNode = {
   node: header,
   container: header.children[0],
-  isShowStyle: false,
+  state: {
+    isShowStyle: false,
+    scroll: window.scrollY,
+  },
+  init: function() {
+    if (this.container.classList.contains('header-shadow')) {
+      this.setCanvas(true)
+    }
+  },
   setShowStyleState: function(state) {
-    if (state !== this.isShowStyle) {
+    if (state !== this.state.isShowStyle) {
       if (state) {
         this.container.classList.add('header-shadow')
       } else {
         this.container.classList.remove('header-shadow')
       }
-
-      this.container.setAttribute(
-        'style',
-        state
-          ? 'background-image: url(\'' + triCanvas + '\'); ' +
-          'background-position: bottom;'
-          : ''
-      )
+      this.setCanvas(state)
     }
-    this.isShowStyle = state
+    this.state.isShowStyle = state
   },
-  scroll: window.scrollY,
+  setCanvas: function(isShow) {
+    this.container.setAttribute(
+      'style',
+      isShow
+        ? 'background-image: url(\'' + triCanvas + '\'); ' +
+        'background-position: bottom;'
+        : ''
+    )
+  },
   setScroll: function(scroll) {
     this.setShowStyleState(scroll > 336 - 56)
 
@@ -34,9 +43,9 @@ const headerNode = {
       this.node.classList.remove('animated')
     }
 
-    if (Math.abs(scroll - this.scroll) > 56) {
-      this.setSlide(scroll > this.scroll)
-      this.scroll = scroll
+    if (Math.abs(scroll - this.state.scroll) > 56) {
+      this.setSlide(scroll > this.state.scroll)
+      this.state.scroll = scroll
     }
   },
   setSlide: function(isOutUp) {
@@ -49,6 +58,8 @@ const headerNode = {
   }
 }
 
-window.onscroll = function() {
+headerNode.init()
+
+window.addEventListener('scroll', function() {
   headerNode.setScroll(window.scrollY)
-}
+})

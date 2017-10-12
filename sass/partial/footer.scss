@@ -1,8 +1,36 @@
 @import "../global/_all";
 
-body > footer {
+footer {
   @include flex(c, c, c);
   margin: 50px 0;
   color: $GREY600;
   font-weight: 300;
+}
+
+.back-to-top {
+  $color: rgba($GREY400, 0.6);
+  $hover-color: $MAIN0;
+
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  @include flex(c, c, c);
+  width: 42px;
+  height: 42px;
+  border: 2px solid $color;
+
+  .icon {
+    background: $color;
+  }
+
+  &:hover {
+    border: 2px solid $hover-color;
+    background: $hover-color;
+    border-radius: 1px;
+
+    .icon {
+      background: $MAINB;
+    }
+  }
+
 }
