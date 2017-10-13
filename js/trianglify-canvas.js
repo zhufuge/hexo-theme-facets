@@ -22,6 +22,7 @@ const colors = [
 ]
 
 const about_card = document.querySelector('.about-card')
+const footer = document.querySelector('footer')
 
 var triCanvas = {}
 
@@ -41,6 +42,10 @@ function setTriCanvas() {
 
   if (about_card) {
     about_card.style.background = 'url("' + pattern + '")'
+  }
+
+  if (footer) {
+    footer.style.background = 'url("' + pattern + '")'
   }
 }
 

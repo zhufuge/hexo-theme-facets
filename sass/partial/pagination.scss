@@ -23,6 +23,7 @@
     font-size: 18px;
     font-weight: 600;
     color: $GREY900;
+    border-radius: 12px;
     .icon {
       background: $GREY900;
     }
@@ -31,7 +32,6 @@
       text-decoration: none;
       background: $hover-bcolor;
       border: 2px solid $hover-bcolor;
-      border-radius: 1px;
       color: $hover-color;
 
       .icon {
@@ -49,7 +49,6 @@
       &:hover, &:focus, &:active {
         background: rgba(#fff, 0);
         border: 2px solid rgba($GREY400, 0.6);
-        border-radius: 0px;
       }
     }
 

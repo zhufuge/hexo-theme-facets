@@ -4,16 +4,25 @@ $date-color: $GREY600;
 $date-size: 14px;
 
 @mixin post-link {
-  color: #FE917D;
+  color: $MAIN0;
   &:hover, &:focus, &:active {
-    color: #FE677E;
+    color: $MAIN3;
   }
 }
 
 .post-preview {
+  background: rgba(#fff, 0.6);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px auto;
+
   .post-title {
     font-size: 28px;
     @include post-link;;
+  }
+
+  .post-attr {
+    margin-top: 12px;
   }
 
   .post-date {
@@ -38,7 +47,7 @@ $date-size: 14px;
   .post-more {
     @include flex(r, e, s);
     font-size: 18px;
-    margin: 0 24px;
+    margin: 0 24px 6px;
     a {
       @include post-link;
     }

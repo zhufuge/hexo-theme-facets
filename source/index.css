@@ -188,7 +188,7 @@ article li {
 article h1, article h2, article h3 {
   width: 100%;
   padding-bottom: 6px;
-  border-bottom: 1.5px solid #BDBDBD;
+  border-bottom: 1.5px solid #E0E0E0;
 }
 
 article h2 {
@@ -198,7 +198,7 @@ article h2 {
 }
 
 article h3 {
-  margin: 32px 0 0;
+  margin: 36px 0 0;
   font-size: 18px;
   font-weight: 600;
 }
@@ -496,7 +496,7 @@ pre .gutter {
 }
 
 #post .post-content {
-  margin: 12px auto;
+  margin: 36px auto 56px;
   padding: 0 16px;
   max-width: 768px;
 }
@@ -567,7 +567,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 36px 0 0;
+  padding: 64px 0;
   color: #757575;
   font-weight: 300;
 }
@@ -583,6 +584,7 @@ footer {
   width: 42px;
   height: 42px;
   border: 2px solid rgba(189, 189, 189, 0.6);
+  border-radius: 12px;
 }
 
 .back-to-top .icon {
@@ -592,11 +594,18 @@ footer {
 .back-to-top:hover {
   border: 2px solid #FE917D;
   background: #FE917D;
-  border-radius: 1px;
+  border-radius: 12px;
 }
 
 .back-to-top:hover .icon {
   background: #FEFEC3;
+}
+
+.post-preview {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px auto;
 }
 
 .post-preview .post-title {
@@ -606,6 +615,10 @@ footer {
 
 .post-preview .post-title:hover, .post-preview .post-title:focus, .post-preview .post-title:active {
   color: #FE677E;
+}
+
+.post-preview .post-attr {
+  margin-top: 12px;
 }
 
 .post-preview .post-date, .post-preview .post-cate {
@@ -629,7 +642,7 @@ footer {
   justify-content: end;
   align-items: start;
   font-size: 18px;
-  margin: 0 24px;
+  margin: 0 24px 6px;
 }
 
 .post-preview .post-more a {
@@ -675,6 +688,7 @@ footer {
   font-size: 18px;
   font-weight: 600;
   color: #212121;
+  border-radius: 12px;
 }
 
 .pager a .icon {
@@ -685,7 +699,6 @@ footer {
   text-decoration: none;
   background: #FE917D;
   border: 2px solid #FE917D;
-  border-radius: 1px;
   color: #FEFEC3;
 }
 
@@ -704,7 +717,6 @@ footer {
 .pager a.non-use:hover, .pager a.non-use:focus, .pager a.non-use:active {
   background: rgba(255, 255, 255, 0);
   border: 2px solid rgba(189, 189, 189, 0.6);
-  border-radius: 0px;
 }
 
 .pager a span {
