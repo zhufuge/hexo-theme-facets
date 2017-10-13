@@ -2,16 +2,14 @@
 
 
 .pager {
-  @include flex(r, c, c);
+  @include flex(r, sb, c);
   overflow: hidden;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 768px;
 
-  .previous {
+  .previous, .next {
     @include flex(r, c, c);
-    margin: 6px;
-  }
-
-  .next {
-    @extend .previous;
   }
 
   a {
@@ -20,7 +18,7 @@
 
     @include flex(r, c, c);
 
-    padding: 16px 22px;
+    padding: 16px 20px;
     border: 2px solid rgba($GREY400, 0.6);
     font-size: 18px;
     font-weight: 600;
@@ -38,6 +36,20 @@
 
       .icon {
         background: $hover-color;
+      }
+    }
+
+    &.non-use {
+      color: rgba($GREY400, 0.6);
+
+      .icon {
+        background: rgba($GREY400, 0.6);
+      }
+
+      &:hover, &:focus, &:active {
+        background: rgba(#fff, 0);
+        border: 2px solid rgba($GREY400, 0.6);
+        border-radius: 0px;
       }
     }
 

@@ -102,7 +102,7 @@ a:active {
 .about-card {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 336px;
@@ -169,17 +169,16 @@ article {
 }
 
 article p {
-  margin: 12px 0;
-  line-height: 2;
+  margin: 16px 6px;
+  line-height: 1.8;
+}
+
+article ol, article ul {
+  margin: 12px 0 0 32px;
 }
 
 article ul {
   list-style: disc;
-  margin-left: 32px;
-}
-
-article ol {
-  margin-left: 32px;
 }
 
 article li {
@@ -222,7 +221,7 @@ dd {
 
 figure.highlight {
   background: rgba(224, 224, 224, 0.6);
-  border-radius: 3px;
+  border-radius: 6px;
   border: 1px solid #FEFEC3;
   text-shadow: 0 0 1px #fff;
   line-height: 1.6;
@@ -250,7 +249,7 @@ figure.highlight table {
 
 figure.highlight .gutter {
   color: black;
-  padding-right: 15px;
+  padding-left: 15px;
   border-right: 2px solid #FEFEC3;
   text-align: right;
 }
@@ -426,10 +425,10 @@ pre .gutter {
 
 #index .about-card {
   font-size: 16px;
+  padding-top: 56px;
 }
 
 #index .about-card .img-container {
-  margin-top: 24px;
   width: 180px;
   height: 180px;
   border-radius: 180px;
@@ -453,18 +452,57 @@ pre .gutter {
 }
 
 #index .about-card p {
-  margin-bottom: 36px;
+  margin-bottom: 16px;
+  height: 48px;
+  max-width: 320px;
   color: #616161;
 }
 
 #index-content {
+  margin: 24px auto;
+  padding: 0 16px;
+  max-width: 768px;
+}
+
+#post .about-card {
+  padding: 56px 12px 0;
+}
+
+#post .about-card h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #212121;
   margin: 24px 0;
-  padding: 0 15px;
+}
+
+@media (max-width: 720px) {
+  #post .about-card h1 {
+    font-size: 32px;
+    margin: 16px 0;
+  }
+}
+
+#post .about-card .meta {
+  color: #616161;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  #post .about-card .meta {
+    font-size: 16px;
+  }
 }
 
 #post .post-content {
-  margin: 12px 0;
-  padding: 0 12px;
+  margin: 12px auto;
+  padding: 0 16px;
+  max-width: 768px;
+}
+
+#post article > p.date, #post article > p.author, #post article > p.creator, #post article > p.validation {
+  display: none;
 }
 
 .header-shadow {
@@ -521,12 +559,6 @@ header .container {
   header .container {
     padding: 0 100px;
     font-size: 16px;
-  }
-}
-
-@media (min-width: 992px) {
-  header .container {
-    box-shadow: 0 0 10px rgba(33, 33, 33, 0.48);
   }
 }
 
@@ -618,9 +650,12 @@ footer {
 .pager {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 768px;
 }
 
 .pager .previous, .pager .next {
@@ -628,7 +663,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 6px;
 }
 
 .pager a {
@@ -636,7 +670,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 22px;
+  padding: 16px 20px;
   border: 2px solid rgba(189, 189, 189, 0.6);
   font-size: 18px;
   font-weight: 600;
@@ -657,6 +691,20 @@ footer {
 
 .pager a:hover .icon, .pager a:focus .icon, .pager a:active .icon {
   background: #FEFEC3;
+}
+
+.pager a.non-use {
+  color: rgba(189, 189, 189, 0.6);
+}
+
+.pager a.non-use .icon {
+  background: rgba(189, 189, 189, 0.6);
+}
+
+.pager a.non-use:hover, .pager a.non-use:focus, .pager a.non-use:active {
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(189, 189, 189, 0.6);
+  border-radius: 0px;
 }
 
 .pager a span {

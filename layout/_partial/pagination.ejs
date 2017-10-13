@@ -1,34 +1,29 @@
 <div class="pager">
-  <div class="previous">
-    <% if (page.prev){ %>
-      <% if (type == 'post') { %>
-        <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
-          <i class="icon-arrow-left icon"></i>
-          <span>PREV</span>
-        </a>
-      <% } %>
-      <% if (type == 'index') { %>
-        <a href="<%- url_for(page.prev_link) %>">
-          <i class="icon-arrow-left icon"></i>
-          <span>NEWER</span>
-        </a>
-      <% } %>
-    <% } %>
-  </div>
-  <div class="next">
-    <% if (page.next){ %>
-      <% if (type == 'post') { %>
-      <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
-        <span>NEXT</span>
+  <% if (type == 'index') { %>
+    <div class="previous">
+      <a
+        class="<%= page.prev ? '' : 'non-use' %>"
+        href="<%= page.prev ? url_for(page.prev_link) : '#' %>">
+        <i class="icon-arrow-left icon"></i>
+        <span>NEWER</span>
+      </a>
+    </div>
+    <div class="next">
+      <a
+        class="<%= page.next ? '' : 'non-use' %>"
+        href="<%= page.next_link ? url_for(page.next_link) : '#' %>">
+        <span>OLDER</span>
         <i class="icon-arrow-right icon"></i>
       </a>
-      <% } %>
-      <% if (type == 'index'){ %>
-        <a href="<%- url_for(page.next_link) %>">
-          <span>OLDER</span>
-          <i class="icon-arrow-right icon"></i>
-        </a>
-      <% } %>
-    <% } %>
-  </div>
+    </div>
+  <% } %>
+
+  <% if (type == 'post') { %>
+    <div class="previous">
+      <a href="javascript:history.back()">
+        <i class="icon-arrow-left icon"></i>
+        <span>BACK</span>
+      </a>
+    </div>
+  <% } %>
 </div>

@@ -1,20 +1,22 @@
 <!-- Post -->
 <div id="post">
   <!-- about card -->
-  <div class="about-card"></div>
-
-  <!-- 正文 -->
-  <div class="post-content">
-    <article><%- page.content %></article>
-  </div>
-
-  <!-- 翻页 -->
-  <%- partial('_partial/pagination', {page: page, type: 'post'}) %>
-
-  <!-- 目录 -->
-  <div class="hidden-xs col-sm-3 toc-col">
-    <div class="toc-wrap">
-      <%- toc(page.content, {list_number: false}) %>
+  <div class="about-card">
+    <h1><%= page.title %></h1>
+    <div class="meta">
+      <div class="author">作者 <%= page.author || config.author %></div>
+      <div class="date">日期 <%= page.date.format(config.date_format) %></div>
+      <div class="categories">分类 </div>
     </div>
   </div>
+
+  <!-- content -->
+  <div class="post-content">
+    <article><%- page.content %></article>
+    <div class="divider"></div>
+  </div>
+
+  <!-- pagination -->
+  <%- partial('_partial/pagination', {page: page, type: 'post'}) %>
+
 </div>

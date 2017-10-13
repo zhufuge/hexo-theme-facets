@@ -26,23 +26,20 @@ const about_card = document.querySelector('.about-card')
 var triCanvas = {}
 
 function setTriCanvas() {
-  const width = window.innerWidth,
-        isMobile = width < 992
+  const width = window.innerWidth
 
   const pattern = Trianglify({
     width: width,
-    height: isMobile ? 336 : 56,
+    height: 336,
     cell_size: 32,
     variance: 1,
     x_colors: colors,
-    y_colors: (
-      isMobile ? [1, 2, 3, 2, 6, 8, 0] : [1, 2, 6, 0]
-    ).map(function(v) {return colors[v]}),
+    y_colors: [1, 2, 3, 2, 6, 8, 0].map(function(v) {return colors[v]}),
   }).canvas().toDataURL()
 
   triCanvas = pattern
 
-  if (isMobile && about_card) {
+  if (about_card) {
     about_card.style.background = 'url("' + pattern + '")'
   }
 }

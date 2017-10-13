@@ -1,8 +1,48 @@
+@import "../global/_all";
 
 #post {
+  .about-card {
+    padding: 56px 12px 0;
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: $GREY900;
+      margin: 24px 0;
+
+      @media (max-width: 720px) {
+        font-size: 32px;
+        margin: 16px 0;
+      }
+    }
+
+    .meta {
+      color: $GREY700;
+      font-size: 17px;
+      line-height: 1.5;
+
+      @media (max-width: 720px) {
+        font-size: 16px;
+      }
+    }
+  }
+
 
   .post-content {
-    margin: 12px 0;
-    padding: 0 12px;
+    margin: 12px auto;
+    padding: 0 16px;
+    max-width: 768px;
+  }
+
+  article {
+    & > p {
+      &.date,
+      &.author,
+      &.creator,
+      &.validation {
+        display: none;
+      }
+    }
   }
 }

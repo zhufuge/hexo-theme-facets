@@ -6,17 +6,16 @@ article {
   width: 100%;
 
   p {
-    margin: 12px 0;
-    line-height: 2;
+    margin: 16px 6px;
+    line-height: 1.8;
+  }
+
+  ol, ul {
+    margin: 12px 0 0 32px;
   }
 
   ul {
     list-style: disc;
-    margin-left: 32px;
-  }
-
-  ol {
-    margin-left: 32px;
   }
 
   li {
@@ -60,7 +59,7 @@ dd {
 
 figure.highlight {
   background: rgba($GREY300, 0.6);
-  border-radius:: 3px;
+  border-radius:: 6px;
   border: 1px solid $MAINB;
   text-shadow: 0 0 1px #fff;
   line-height: 1.6;
@@ -87,7 +86,7 @@ figure.highlight {
 
   .gutter {
     color: black;
-    padding-right: 15px;
+    padding-left: 15px;
     border-right: 2px solid $MAINB;
     text-align: right;
   }

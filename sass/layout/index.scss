@@ -3,11 +3,11 @@
 #index {
   .about-card {
     font-size: 16px;
+    padding-top: 56px;
 
     .img-container {
       $size: 180px;
 
-      margin-top: 24px;
       width: $size;
       height: $size;
       border-radius: $size;
@@ -31,13 +31,16 @@
     }
 
     p {
-      margin-bottom: 36px;
+      margin-bottom: 16px;
+      height: 48px;
+      max-width: 320px;
       color: $GREY700;
     }
   }
 }
 
 #index-content {
-  margin: 24px 0;
-  padding: 0 15px;
+  margin: 24px auto;
+  padding: 0 16px;
+  max-width: 768px;
 }
