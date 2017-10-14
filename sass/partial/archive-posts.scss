@@ -1,0 +1,50 @@
+@import "../global/_all";
+
+.archive-post {
+  margin: 24px 0;
+  background: rgba(#fff, 0.6);
+  border-radius: 12px;
+
+  h2 {
+    padding: 24px;
+    border-bottom: 3px solid $MAINB;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: $GREY900;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  li {
+    padding: 24px 64px;
+    border-bottom: 3px solid $MAINB;
+    color: $GREY700;
+    @include flex(r, s, c);
+
+    span {
+      font-size: 14px;
+      margin-right: 64px;
+    }
+
+    a {
+      font-size: 17px;
+      color: $MAIN0;
+
+      &:hover, &:focus, &:active {
+        color: $MAIN3;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+
+      span {
+        font-size: 14px;
+        margin-right: 24px;
+      }
+    }
+  }
+}

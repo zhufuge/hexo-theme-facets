@@ -505,6 +505,50 @@ pre .gutter {
   display: none;
 }
 
+#archive .about-card {
+  padding: 56px 12px 0;
+}
+
+#archive .about-card h1 {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  color: #212121;
+  margin: 86px 0 32px;
+  border-bottom: 3px solid;
+}
+
+@media (max-width: 720px) {
+  #archive .about-card h1 {
+    font-size: 36px;
+    margin: 86px 0 32px;
+  }
+}
+
+#archive .about-card a {
+  margin: 8px auto 6px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #424242;
+}
+
+#archive .about-card a:hover, #archive .about-card a:focus, #archive .about-card a:active {
+  color: white;
+}
+
+#archive .about-card p {
+  margin-bottom: 16px;
+  height: 48px;
+  max-width: 320px;
+  color: #616161;
+}
+
+#archive .content {
+  margin: 24px auto;
+  padding: 0 16px;
+  max-width: 768px;
+}
+
 .header-shadow {
   box-shadow: 0 0 10px rgba(33, 33, 33, 0.48);
 }
@@ -721,6 +765,61 @@ footer {
 
 .pager a span {
   padding: 0 6px;
+}
+
+.archive-post {
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+.archive-post h2 {
+  padding: 24px;
+  border-bottom: 3px solid #FEFEC3;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+}
+
+@media (max-width: 768px) {
+  .archive-post h2 {
+    font-size: 18px;
+  }
+}
+
+.archive-post li {
+  padding: 24px 64px;
+  border-bottom: 3px solid #FEFEC3;
+  color: #616161;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.archive-post li span {
+  font-size: 14px;
+  margin-right: 64px;
+}
+
+.archive-post li a {
+  font-size: 17px;
+  color: #FE917D;
+}
+
+.archive-post li a:hover, .archive-post li a:focus, .archive-post li a:active {
+  color: #FE677E;
+}
+
+@media (max-width: 768px) {
+  .archive-post li {
+    padding: 24px 12px;
+  }
+  .archive-post li span {
+    font-size: 14px;
+    margin-right: 24px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

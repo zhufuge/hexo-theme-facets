@@ -1,0 +1,11 @@
+<div class="archive-post">
+  <h2><%= year %></h2>
+  <ul>
+    <% posts.forEach(function(post) { %>
+      <li>
+        <span><%= post.date.format('YYYY-MM-DD') %></span>
+        <a href=""><%= post.title %></a>
+      </li>
+    <% }) %>
+  </ul>
+</div>
