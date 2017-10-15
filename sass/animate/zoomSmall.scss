@@ -1,0 +1,8 @@
+@keyframes zoomSmall {
+  from {font-size: 20.8px; } to {font-size: 19.2px; }
+}
+
+.zoomSmall {
+  animation-duration: 0.3s;
+  animation-name: zoomSmall;
+}

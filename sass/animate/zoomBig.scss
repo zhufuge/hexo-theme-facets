@@ -1,0 +1,9 @@
+@keyframes zoomBig {
+  from { font-size: 19.2px; } to { font-size: 20.8px; }
+}
+
+.zoomBig {
+  animation-duration: 0.3s;
+  animation-name: zoomBig;
+  font-size: 20.8px;
+}

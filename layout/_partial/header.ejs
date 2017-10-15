@@ -1,11 +1,31 @@
-<header class="animated">
+<header class="animated slideInDown">
   <div class="container">
-    <a href="<%= config.root %>">
-      <span>
-        <%= config.facets_author %>
-      </span>
-      's blog
-    </a>
-    <%- image_tag('svg/menu.svg', {width: 28}) %>
+    <div class="logo">
+      <a href="<%= config.root %>">
+        <span>
+          <%= config.facets_author %>
+        </span>
+        's blog
+      </a>
+    </div>
+    <div class="nav">
+      <div class="menu">
+        <i class="icon-menu icon"></i>
+      </div>
+      <ul class="fadeOut">
+        <div class="triangle"></div>
+        <%
+        const navs = [
+          { name: 'HOME', url: '' },
+          { name: 'ARCHIVE', url: '/archives' },
+          { name: 'CATEGORY', url: '/categories' },
+        ]
+        %>
+        <% navs.forEach(function(item) { %>
+          <a href="<%- url_for(item.url) %>"><li><%= item.name %></li></a>
+        <% }) %>
+        <div></div>
+      </ul>
+    </div>
   </div>
 </header>

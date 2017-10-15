@@ -20,8 +20,13 @@ header {
     background: $MAIN2;
   }
 
+  .logo {
+    @include flex(r, c, c);
+    width: 156px;
+  }
+
   a {
-    color: $BLACK;
+    color: $GREY900;
     font-size: 1.2em;
     font-weight: 600;
 
@@ -46,8 +51,104 @@ header {
     padding: 0 15px;
     font-size: 14px;
     @media (min-width: 768px) {
-      padding: 0 100px;
+      padding: 0 48px;
       font-size: 16px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 0 100px;
+    }
+  }
+
+  .nav {
+    @include flex(r, c, c);
+    margin-right: 12px;
+    height: 100%;
+  }
+
+  .menu {
+    @include flex(r, c, c);
+    border-radius: 6px;
+    padding: 3px;
+
+    &:hover {
+      background: rgba(#000, 0.1);
+    }
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+
+  .icon {
+    $size: 32px;
+    mask-size: $size;
+    width: $size;
+    height: $size;
+  }
+
+  ul {
+    @include flex(r, c, c);
+    height: 100%;
+
+    a {
+      color: $GREY900;
+
+      &:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 6px;
+      display: none;
+      height: auto;
+      position: absolute;
+      top: 56px;
+      right: 28px;
+      border-radius: 6px;
+      background: $MAINB;
+      box-shadow: 0 0 6px $GREY400;
+
+      a {
+        border-radius: 4px;
+        display: block;
+        color: $MAIN0;
+        background: rgba(#000, 0);
+
+        &:hover, &:focus, &:active {
+          color: $MAIN3;
+          text-decoration: underline;
+          background: rgba(#000, 0.1);
+        }
+      }
+    }
+
+    li {
+      width: 128px;
+      @include flex(r, c, c);
+
+      @media (max-width: 768px) {
+        padding: 12px;
+        justify-content: start;
+      }
+    }
+  }
+
+  .triangle {
+    z-index: -1;
+    position: absolute;
+    top: -6px;
+    right: 9px;
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    background: #FEFEC3;
+
+    @media (min-width: 767px) {
+      display: none;
     }
   }
 }

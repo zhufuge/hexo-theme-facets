@@ -1,0 +1,14 @@
+$icons: menu, calendar, folder, arrow-left, arrow-right, arrow-up;
+
+@each $icon in $icons {
+  i.icon-#{$icon} {
+    $size: 24px;
+
+    display: inline-block;
+    mask-image: url('/svg/#{$icon}.svg');
+    mask-size: $size;
+    width: $size;
+    height: $size;
+    background-color: #000;
+  }
+}
