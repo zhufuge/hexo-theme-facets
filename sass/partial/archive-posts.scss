@@ -16,6 +16,12 @@
     @media (max-width: 768px) {
       font-size: 18px;
     }
+
+    span {
+      margin: 0 6px;
+      font-size: 16px;
+      color: $GREY600;
+    }
   }
 
   li {

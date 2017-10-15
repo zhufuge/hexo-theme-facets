@@ -1,0 +1,62 @@
+@import '../global/_all';
+
+#archive {
+  .about-card {
+    padding: 56px 12px 0;
+
+    h1 {
+      text-align: center;
+      font-size: 46px;
+      font-weight: 700;
+      color: $GREY900;
+      margin: 86px 0 32px;
+      border-bottom: 3px solid;
+
+      @media (max-width: 720px) {
+        font-size: 36px;
+        margin: 86px 0 32px;
+      }
+    }
+
+    a {
+      margin: 8px auto 6px;
+      font-size: 1em;
+      font-weight: 600;
+      color: $GREY800;
+
+      &:hover, &:focus, &:active {
+        color: white;
+      }
+    }
+
+    p {
+      margin-bottom: 16px;
+      height: 48px;
+      max-width: 320px;
+      color: $GREY700;
+    }
+  }
+
+  .content {
+    margin: 24px auto;
+    padding: 0 16px;
+    max-width: 768px;
+
+    .title {
+      margin: 24px 0;
+      background: rgba(#fff, 0.6);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: $GREY900;
+
+      span {
+        margin: 0 6px;
+        font-size: 16px;
+        color: $GREY600;
+      }
+    }
+  }
+}

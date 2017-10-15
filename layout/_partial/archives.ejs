@@ -1,16 +1,41 @@
-<!-- Main Content -->
-<div class="archives">
-	<%
-  const group = _.map(_.groupBy(site.posts.toArray(), p => p.date.format('YYYY')),
-    (posts, year) => ({
-      year: year,
-      posts: _.sortBy(posts, p => p.date.format('MMDD')).reverse()
-    })).reverse()
-  %>
-  <% group.forEach(function(item) { %>
-	  <%- partial(
-      '_partial/archive-posts',
-      { year: item.year, posts: item.posts }
-    ) %>
-	<% }) %>
+<!-- ARCHIVE -->
+<div id="archive">
+  <!-- Short about card -->
+  <div class="about-card">
+    <h1>ARCHIVE</h1>
+    <a href="<%= config.root %>about/">
+      <%= config.author %>
+    </a>
+    <p><%= config.facets_description || '' %></p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+	  <%
+    const posts = page.posts.toArray()
+    const group = _.map(_.groupBy(posts, p => p.date.format('YYYY')),
+      (posts, year) => ({
+        year: year,
+        posts: _.sortBy(posts, p => p.date.format('MMDD')).reverse(),
+        total: posts.length,
+      })).reverse()
+    %>
+
+    <% if (type === 'category') { %>
+      <div class="title">
+        <%= page.category %>
+        <span>(<%= posts.length %>篇)</span>
+      </div>
+    <% } %>
+    <% group.forEach(function(item) { %>
+	    <%- partial(
+        '_partial/archive-posts',
+        { year: item.year, posts: item.posts, total: item.total }
+      ) %>
+	  <% }) %>
+  </div>
+
+  <!-- pagination -->
+  <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
+
 </div>

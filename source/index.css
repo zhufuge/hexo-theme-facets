@@ -220,7 +220,7 @@ dd {
 }
 
 figure.highlight {
-  background: rgba(224, 224, 224, 0.6);
+  background: rgba(224, 224, 224, 0.3);
   border-radius: 6px;
   border: 1px solid #FEFEC3;
   text-shadow: 0 0 1px #fff;
@@ -505,50 +505,6 @@ pre .gutter {
   display: none;
 }
 
-#archive .about-card {
-  padding: 56px 12px 0;
-}
-
-#archive .about-card h1 {
-  text-align: center;
-  font-size: 46px;
-  font-weight: 700;
-  color: #212121;
-  margin: 86px 0 32px;
-  border-bottom: 3px solid;
-}
-
-@media (max-width: 720px) {
-  #archive .about-card h1 {
-    font-size: 36px;
-    margin: 86px 0 32px;
-  }
-}
-
-#archive .about-card a {
-  margin: 8px auto 6px;
-  font-size: 1em;
-  font-weight: 600;
-  color: #424242;
-}
-
-#archive .about-card a:hover, #archive .about-card a:focus, #archive .about-card a:active {
-  color: white;
-}
-
-#archive .about-card p {
-  margin-bottom: 16px;
-  height: 48px;
-  max-width: 320px;
-  color: #616161;
-}
-
-#archive .content {
-  margin: 24px auto;
-  padding: 0 16px;
-  max-width: 768px;
-}
-
 .header-shadow {
   box-shadow: 0 0 10px rgba(33, 33, 33, 0.48);
 }
@@ -767,6 +723,67 @@ footer {
   padding: 0 6px;
 }
 
+#archive .about-card {
+  padding: 56px 12px 0;
+}
+
+#archive .about-card h1 {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  color: #212121;
+  margin: 86px 0 32px;
+  border-bottom: 3px solid;
+}
+
+@media (max-width: 720px) {
+  #archive .about-card h1 {
+    font-size: 36px;
+    margin: 86px 0 32px;
+  }
+}
+
+#archive .about-card a {
+  margin: 8px auto 6px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #424242;
+}
+
+#archive .about-card a:hover, #archive .about-card a:focus, #archive .about-card a:active {
+  color: white;
+}
+
+#archive .about-card p {
+  margin-bottom: 16px;
+  height: 48px;
+  max-width: 320px;
+  color: #616161;
+}
+
+#archive .content {
+  margin: 24px auto;
+  padding: 0 16px;
+  max-width: 768px;
+}
+
+#archive .content .title {
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #212121;
+}
+
+#archive .content .title span {
+  margin: 0 6px;
+  font-size: 16px;
+  color: #757575;
+}
+
 .archive-post {
   margin: 24px 0;
   background: rgba(255, 255, 255, 0.6);
@@ -786,6 +803,12 @@ footer {
   .archive-post h2 {
     font-size: 18px;
   }
+}
+
+.archive-post h2 span {
+  margin: 0 6px;
+  font-size: 16px;
+  color: #757575;
 }
 
 .archive-post li {

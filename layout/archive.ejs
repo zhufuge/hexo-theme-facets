@@ -1,16 +1,1 @@
-<!-- ARCHIVE -->
-<div id="archive">
-  <!-- Short about card -->
-  <div class="about-card">
-    <h1>ARCHIVE</h1>
-    <a href="<%= config.root %>about/">
-      <%= config.author %>
-    </a>
-    <p><%= config.facets_description || '' %></p>
-  </div>
-
-  <div class="content">
-    <%- partial('_partial/archives') %>
-  </div>
-
-</div>
+<%- partial('_partial/archives', { type: 'archive' }) %>
