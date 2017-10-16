@@ -65,6 +65,10 @@ const headerNode = {
   hideMenu: function() {
     this.menu.classList.replace('fadeIn', 'fadeOut')
     window.removeEventListener('click', this.hideMenu.bind(this))
+    setTimeout(
+      (function() { this.menu.style = 'display: none;' }).bind(this),
+      750
+    )
     this.state.menu = false
   }
 }
