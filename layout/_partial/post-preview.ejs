@@ -3,27 +3,28 @@
     <%= post.title || "未命名" %>
   </a>
   <div class="post-attr">
-    <span class="post-date">
+    <div class="post-date">
       <i class="icon-calendar icon"></i>
       <span>
         <%= post.date.format(config.date_format) %>
       </span>
-    </span>
-    <% if (post.categories && post.categories.length !== 0) { %>
-      <span class="post-cate">
-        <i class="icon-folder icon"></i>
-        <% post.categories.map(function(cate) { %>
-          <a href=""><% cate %></a>
-        <% }) %>
-      </span>
-    <% } %>
-  </div>
-  <% if (excerpt) { %>
-    <div class="post-content-preview">
-      <article><%- post.excerpt %></article>
-      <div class="post-more" >
-        <a href="<%- url_for(post.path) %>">more...</a>
+    </div>
+    <div class="post-cates">
+      <i class="icon-folder icon"></i>
+      <div class="cates">
+        <%- list_categories(post.categories, {
+          show_count: false,
+          style: 'none',
+          class: '',
+          separator: ' · ',
+        }) %>
       </div>
     </div>
-  <% } %>
-</div>
+  </div>
+  <div class="post-content-preview">
+    <article><%- post.excerpt %></article>
+    <div class="post-more" >
+      <a href="<%- url_for(post.path) %>">more...</a>
+    </div>
+  </div>
+ </div>

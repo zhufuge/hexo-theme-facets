@@ -122,46 +122,6 @@ a:active {
   background: rgba(189, 189, 189, 0.6);
 }
 
-i.icon-calendar {
-  display: inline-block;
-  mask-image: url("/svg/calendar.svg");
-  mask-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-i.icon-folder {
-  display: inline-block;
-  mask-image: url("/svg/folder.svg");
-  mask-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-i.icon-arrow-left {
-  display: inline-block;
-  mask-image: url("/svg/arrow-left.svg");
-  mask-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-i.icon-arrow-right {
-  display: inline-block;
-  mask-image: url("/svg/arrow-right.svg");
-  mask-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-i.icon-arrow-up {
-  display: inline-block;
-  mask-image: url("/svg/arrow-up.svg");
-  mask-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
 article {
   font-size: 16px;
   color: #424242;
@@ -349,6 +309,60 @@ pre .gutter {
   width: 70px;
 }
 
+i.icon-menu {
+  display: inline-block;
+  mask-image: url("/svg/menu.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
+i.icon-calendar {
+  display: inline-block;
+  mask-image: url("/svg/calendar.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
+i.icon-folder {
+  display: inline-block;
+  mask-image: url("/svg/folder.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
+i.icon-arrow-left {
+  display: inline-block;
+  mask-image: url("/svg/arrow-left.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
+i.icon-arrow-right {
+  display: inline-block;
+  mask-image: url("/svg/arrow-right.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
+i.icon-arrow-up {
+  display: inline-block;
+  mask-image: url("/svg/arrow-up.svg");
+  mask-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+}
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -423,6 +437,35 @@ pre .gutter {
   animation-name: slideOutUp;
 }
 
+@keyframes zoomBig {
+  from {
+    font-size: 1.2em;
+  }
+  to {
+    font-size: 1.3em;
+  }
+}
+
+.zoomBig {
+  animation-duration: 0.3s;
+  animation-name: zoomBig;
+  font-size: 1.3em;
+}
+
+@keyframes zoomSmall {
+  from {
+    font-size: 1.3em;
+  }
+  to {
+    font-size: 1.2em;
+  }
+}
+
+.zoomSmall {
+  animation-duration: 0.3s;
+  animation-name: zoomSmall;
+}
+
 #index .about-card {
   font-size: 16px;
   padding-top: 56px;
@@ -486,13 +529,18 @@ pre .gutter {
 #post .about-card .meta {
   color: #616161;
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.8;
+  text-align: center;
 }
 
 @media (max-width: 720px) {
   #post .about-card .meta {
     font-size: 16px;
   }
+}
+
+#post .about-card .meta .categories a {
+  font-weight: 700;
 }
 
 #post .post-content {
@@ -526,8 +574,22 @@ header::before {
   background: #F3170C;
 }
 
+header .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  header .logo {
+    width: 156px;
+  }
+}
+
 header a {
-  color: black;
+  color: #212121;
   font-size: 1.2em;
   font-weight: 600;
 }
@@ -557,8 +619,123 @@ header .container {
 
 @media (min-width: 768px) {
   header .container {
-    padding: 0 100px;
+    padding: 0 48px;
     font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  header .container {
+    padding: 0 100px;
+  }
+}
+
+header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  height: 100%;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+header .menu:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 767px) {
+  header .menu {
+    display: none;
+  }
+}
+
+header .icon {
+  mask-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+header ul a {
+  color: #212121;
+}
+
+header ul a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header ul {
+    padding: 6px;
+    display: none;
+    height: auto;
+    position: absolute;
+    top: 56px;
+    right: 28px;
+    border-radius: 6px;
+    background: #FEFEC3;
+    box-shadow: 0 0 6px #BDBDBD;
+  }
+  header ul a {
+    border-radius: 4px;
+    display: block;
+    color: #FE917D;
+    background: transparent;
+  }
+  header ul a:hover, header ul a:focus, header ul a:active {
+    color: #FE677E;
+    text-decoration: underline;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+header ul li {
+  width: 128px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  header ul li {
+    padding: 12px;
+    justify-content: start;
+  }
+}
+
+header .triangle {
+  z-index: -1;
+  position: absolute;
+  top: -6px;
+  right: 9px;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  background: #FEFEC3;
+}
+
+@media (min-width: 767px) {
+  header .triangle {
+    display: none;
   }
 }
 
@@ -618,17 +795,46 @@ footer {
 }
 
 .post-preview .post-attr {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 12px;
+  overflow: hidden;
 }
 
-.post-preview .post-date, .post-preview .post-cate {
+.post-preview .post-date, .post-preview .post-cates {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
   color: #757575;
   font-size: 14px;
   margin: 8px;
+  margin-right: 24px;
 }
 
-.post-preview .post-date span, .post-preview .post-cate span {
-  margin-left: 3px;
+.post-preview .post-date span, .post-preview .post-cates span {
+  margin-left: 8px;
+}
+
+.post-preview .post-cates .cates {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.post-preview .post-cates a {
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FE917D;
+}
+
+.post-preview .post-cates a:hover {
+  color: #FE677E;
 }
 
 .post-preview .post-content-preview {

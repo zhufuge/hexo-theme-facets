@@ -22,7 +22,11 @@ header {
 
   .logo {
     @include flex(r, c, c);
-    width: 156px;
+    width: 200px;
+
+    @media (max-width: 768px) {
+      width: 156px;
+    }
   }
 
   a {

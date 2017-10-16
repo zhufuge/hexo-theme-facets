@@ -15,7 +15,7 @@
   <!-- Content -->
   <div id="index-content">
     <% page.posts.each(function(post){ %>
-      <%- partial('_partial/post-preview', {post: post, excerpt: true}) %>
+      <%- partial('_partial/post-preview', {post: post}) %>
     <% }); %>
 
   </div>

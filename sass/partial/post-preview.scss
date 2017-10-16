@@ -22,21 +22,41 @@ $date-size: 14px;
   }
 
   .post-attr {
+    @include flex(r, s, c);
+    flex-wrap: wrap;
     margin-top: 12px;
+    overflow: hidden;
   }
 
   .post-date {
+    @include flex(r, s, c);
     color: $date-color;
     font-size: $date-size;
     margin: 8px;
+    margin-right: 24px;
 
     span {
-      margin-left: 3px;
+      margin-left: 8px;
     }
   }
 
-  .post-cate {
+  .post-cates {
     @extend .post-date;
+
+    .cates {
+      @include flex(r, s, c);
+    }
+
+    a {
+      margin: 0 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: $MAIN0;
+
+      &:hover {
+        color: $MAIN3;
+      }
+    }
   }
 
   .post-content-preview {

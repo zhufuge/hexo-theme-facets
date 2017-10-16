@@ -43,8 +43,12 @@ const headerNode = {
   },
   animate: function(isOutUp) {
     const ani = ['slideInDown', 'slideOutUp']
-    this.node.classList.replace(...(isOutUp ? ani : ani.reverse()))
-    if (isOutUp) this.hideMenu()
+    if (isOutUp) {
+      this.node.classList.replace(ani)
+      this.hideMenu()
+    } else {
+      this.node.classList.replace(ani.reverse())
+    }
   },
   handleIconClick: function(event) {
     if (this.state.menu) {
