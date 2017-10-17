@@ -42,12 +42,11 @@ const headerNode = {
     this.state.style = style
   },
   animate: function(isOutUp) {
-    const ani = ['slideInDown', 'slideOutUp']
     if (isOutUp) {
-      this.node.classList.replace(ani)
-      this.hideMenu()
+      this.node.classList.replace('slideInDown', 'slideOutUp')
+      if (window.innerWidth < 767) this.hideMenu()
     } else {
-      this.node.classList.replace(ani.reverse())
+      this.node.classList.replace('slideOutUp', 'slideInDown')
     }
   },
   handleIconClick: function(event) {

@@ -1,0 +1,58 @@
+@import "../global/_all";
+
+#sider {
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  margin: 24px 12px 24px 0;
+  width: 240px;
+
+  .categories,
+  .archives {
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(#fff, 0.6);
+    margin-bottom: 12px;
+  }
+
+  .title {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 3px solid $MAINB;
+    font-weight: 700;
+    color: $GREY900;
+  }
+
+  ul {
+    list-style: inside;
+  }
+
+  li {
+    padding: 12px 0 12px 24px;
+    border-bottom: 2px solid $MAINB;
+
+    a {
+      margin: 0 6px;
+      color: $MAIN0;
+
+      &:hover, &:active {
+        color: $MAIN3;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      color: $GREY600;
+      margin: 0 3px;
+
+      &::before {
+        content: '('
+      }
+
+      &::after {
+        content: '篇)'
+      }
+    }
+  }
+}

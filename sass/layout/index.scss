@@ -37,10 +37,15 @@
       color: $GREY700;
     }
   }
+
+  .content {
+    @include flex(r, c, s);
+  }
+
+  .list {
+    margin: 24px auto;
+    padding: 0 16px;
+    max-width: 768px;
+  }
 }
 
-#index-content {
-  margin: 24px auto;
-  padding: 0 16px;
-  max-width: 768px;
-}

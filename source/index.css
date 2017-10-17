@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 p,
@@ -501,7 +502,14 @@ i.icon-arrow-up {
   color: #616161;
 }
 
-#index-content {
+#index .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+#index .list {
   margin: 24px auto;
   padding: 0 16px;
   max-width: 768px;
@@ -1049,6 +1057,65 @@ footer {
     font-size: 14px;
     margin-right: 24px;
   }
+}
+
+#sider {
+  margin: 24px 12px 24px 0;
+  width: 240px;
+}
+
+@media (max-width: 992px) {
+  #sider {
+    display: none;
+  }
+}
+
+#sider .categories,
+#sider .archives {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+
+#sider .title {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 3px solid #FEFEC3;
+  font-weight: 700;
+  color: #212121;
+}
+
+#sider ul {
+  list-style: inside;
+}
+
+#sider li {
+  padding: 12px 0 12px 24px;
+  border-bottom: 2px solid #FEFEC3;
+}
+
+#sider li a {
+  margin: 0 6px;
+  color: #FE917D;
+}
+
+#sider li a:hover, #sider li a:active {
+  color: #FE677E;
+}
+
+#sider li span {
+  font-size: 14px;
+  color: #757575;
+  margin: 0 3px;
+}
+
+#sider li span::before {
+  content: '(';
+}
+
+#sider li span::after {
+  content: '篇)';
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+<!-- SIDER -->
+<div id="sider">
+  <div class="categories">
+    <div class="title">CATEGORIES</div>
+    <%- list_categories(site.categories, { show_count: true }) %>
+  </div>
+  <div class="archives">
+    <div class="title">ARCHIVES</div>
+    <%- list_archives(site.archives, {
+      show_count: true,
+      format: 'YYYY',/* don't work? */
+    }) %>
+  </div>
+</div>

@@ -13,14 +13,19 @@
   </div>
 
   <!-- Content -->
-  <div id="index-content">
-    <% page.posts.each(function(post){ %>
-      <%- partial('_partial/post-preview', {post: post}) %>
-    <% }); %>
+  <div class="content">
+    <div class="main">
+      <div class="list">
+        <% page.posts.each(function(post){ %>
+          <%- partial('_partial/post-preview', {post: post}) %>
+        <% }); %>
+      </div>
 
+      <!-- pagination -->
+      <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
+    </div>
+
+    <!-- sider -->
+    <%- partial('_partial/sider') %>
   </div>
-
-  <!-- pagination -->
-  <%- partial('_partial/pagination', {page: page, type: 'index'}) %>
-
 </div>
