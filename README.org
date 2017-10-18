@@ -1,7 +1,30 @@
 #+TITLE: hexo-theme-facets
 #+AUTHOR: zhufuge
-#+DATE: <2017-10-08 周日 22:38>
+#+DATE: <2017-10-18 周三 12:37>
 
-I want to rewrite it by vue.
+一个可爱������的 hexo 主题。
 
-Maybe do it with TypeScript, If I can.
+受启发于 [[https://github.com/Haojen/hexo-theme-Anisina][hexo-theme-Anisina]] 和 [[https://addons.mozilla.org/zh-CN/firefox/addon/facets/][facets]] 。
+
+** 安装
+#+BEGIN_SRC sh
+  $ git clone https://github.com/zhufuge/hexo-theme-facets.git themes/facets
+#+END_SRC
+
+** 配置
+
+   在 hexo 根目录下的 =_config.yml= 中添加：
+#+BEGIN_SRC yml
+  ...
+  theme: facets
+  ...
+
+  # hexo-theme-facets config
+  facets_author: #主页显示的个人名称
+  facets_description: #主页显示的个人描述
+#+END_SRC
+
+** 鸣谢
+   - [[https://github.com/qrohlf/trianglify][trianglify]] 提供的开源三角绘图库。
+   - [[https://github.com/colebemis/feather][feather]] 提供的开源图像。
+   - [[https://github.com/daneden/animate.css][animate.css]] 提供的动画效果。

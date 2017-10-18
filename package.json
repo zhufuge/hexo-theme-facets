@@ -10,7 +10,7 @@
     "build": "yarn build-js & yarn build-sass",
     "build-js": "webpack",
     "run-sass": "node-sass -w -r --source-map true facets.scss source/index.css",
-    "build-sass": "node-sass --output-style expanded --source-map true facets.scss source/index.css"
+    "build-sass": "node-sass --output-style compressed --source-map true facets.scss source/index.css"
   },
   "devDependencies": {
     "animate.css": "^3.5.2",
