@@ -2,7 +2,7 @@
 #+AUTHOR: zhufuge
 #+DATE: <2017-10-18 周三 12:37>
 
-一个可爱������的 hexo 主题。
+一个可爱的 hexo 主题。
 
 受启发于 [[https://github.com/Haojen/hexo-theme-Anisina][hexo-theme-Anisina]] 和 [[https://addons.mozilla.org/zh-CN/firefox/addon/facets/][facets]] 。
 

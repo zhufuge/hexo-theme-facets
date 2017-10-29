@@ -26,9 +26,8 @@ const footer = document.querySelector('footer')
 
 var triCanvas = {}
 
-function setTriCanvas() {
-  const width = window.innerWidth
-
+var width = window.innerWidth
+function setTriCanvas(width) {
   const pattern = Trianglify({
     width: width,
     height: 336,
@@ -42,14 +41,23 @@ function setTriCanvas() {
 
   if (about_card) {
     about_card.style.background = 'url("' + pattern + '")'
+    about_card.classList.add('fadeIn')
+    setTimeout(function() {
+      about_card.classList.remove('fadeIn')
+    }, 1000)
   }
 
   if (footer) {
     footer.style.background = 'url("' + pattern + '")'
   }
 }
+setTriCanvas(width)
 
-setTriCanvas()
-window.addEventListener('resize', debounce(setTriCanvas, 150))
+window.addEventListener('resize', debounce(function () {
+  if (width < window.innerWidth) {
+    width = window.innerWidth
+    setTriCanvas(width)
+  }
+}, 150))
 
 export default triCanvas
