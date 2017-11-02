@@ -11,4 +11,12 @@
       format: 'YYYY',/* don't work? */
     }) %>
   </div>
+  <% var algoPost = null %>
+  <% site.posts.each(function(post) {if (post.title === 'LeetCode-JS') algoPost = post}) %>
+  <% if (algoPost) { %>
+    <div class="algorithm">
+      <div class="title">ALGORITHM</div>
+      <%- algoPost.excerpt %>
+    </div>
+  <% } %>
 </div>

@@ -9,11 +9,27 @@
   width: 240px;
 
   .categories,
-  .archives {
+  .archives,
+  .algorithm {
     width: 100%;
     border-radius: 8px;
     background: rgba(#fff, 0.6);
     margin-bottom: 12px;
+  }
+
+  .algorithm {
+    p {
+      display: none;
+    }
+    li {
+      padding: 12px;
+      display: flex;
+    }
+    a {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
 
   .title {
