@@ -1,23 +1,24 @@
 @import "../global/_all";
 
-table {
+article > table {
   width: 100%;
   border: 2px solid #fff0;
-}
 
-th, td {
-  padding: 12px;
-}
+  tr {
+    background: rgba(#fff, 0.7);
+    border-bottom: 2px solid $MAINB;
 
-tr {
-  background: rgba(#fff, 0.7);
-  border-bottom: 2px solid $MAINB;
+    td:nth-child(1), th:nth-child(1) {
+      text-align: right;
+    }
+  }
 
-  td:nth-child(1), th:nth-child(1) {
-    text-align: right;
+  th, td {
+    padding: 12px;
+  }
+
+  thead tr {
+    border-bottom: 3px solid $MAINB;
   }
 }
 
-thead tr {
-  border-bottom: 3px solid $MAINB;
-}
