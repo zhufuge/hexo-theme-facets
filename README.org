@@ -7,22 +7,22 @@
 受启发于 [[https://github.com/Haojen/hexo-theme-Anisina][hexo-theme-Anisina]] 和 [[https://addons.mozilla.org/zh-CN/firefox/addon/facets/][facets]] 。
 
 ** 安装
-#+BEGIN_SRC sh
-  $ git clone https://github.com/zhufuge/hexo-theme-facets.git themes/facets
-#+END_SRC
+   #+BEGIN_SRC sh
+   $ git clone https://github.com/zhufuge/hexo-theme-facets.git themes/facets
+   #+END_SRC
 
 ** 配置
 
    在 hexo 根目录下的 =_config.yml= 中添加：
-#+BEGIN_SRC yml
-  ...
-  theme: facets
-  ...
+   #+BEGIN_SRC yml
+   ...
+   theme: facets
+   ...
 
-  # hexo-theme-facets config
-  facets_author: #主页显示的个人名称
-  facets_description: #主页显示的个人描述
-#+END_SRC
+   # hexo-theme-facets config
+   facets_author: #主页显示的个人名称
+   facets_description: #主页显示的个人描述
+   #+END_SRC
 
 ** 鸣谢
    - [[https://github.com/qrohlf/trianglify][trianglify]] 提供的开源三角绘图库。

@@ -12,11 +12,16 @@
     }) %>
   </div>
   <% var algoPost = null %>
-  <% site.posts.each(function(post) {if (post.title === 'LeetCode-JS') algoPost = post}) %>
+  <% site.posts.each(function(post) {
+    if (post.title === 'LeetCode-JS') {
+      algoPost = post
+    }
+  }) %>
   <% if (algoPost) { %>
     <div class="algorithm">
       <div class="title">ALGORITHM</div>
       <%- algoPost.excerpt %>
+      <div class="more"><a href="<%= url_for(algoPost.path) %>">more...</a></div>
     </div>
   <% } %>
 </div>

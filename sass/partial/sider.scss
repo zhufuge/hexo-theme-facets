@@ -40,6 +40,19 @@
     color: $GREY900;
   }
 
+  .more {
+    padding: 12px;
+
+    a {
+      margin: 0 6px;
+      color: $MAIN0;
+
+      &:hover, &:active {
+        color: $MAIN3;
+      }
+    }
+  }
+
   ul {
     list-style: inside;
   }
