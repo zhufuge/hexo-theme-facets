@@ -1,7 +1,7 @@
 @import "../global/_all";
 
 #post {
-  .about-card {
+  .intro {
     padding: 56px 12px 0;
 
     h1 {
@@ -14,6 +14,19 @@
       @media (max-width: 720px) {
         font-size: 32px;
         margin: 16px 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $MAIN1;
+
+      &:hover, &:focus {
+        color: $MAIN1;
+        text-decoration: underline;
+      }
+      &:active {
+        color: $MAIN1;
       }
     }
 

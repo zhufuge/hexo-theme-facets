@@ -1,0 +1,38 @@
+@import "../global/_all";
+
+.intro {
+  font-size: 16px;
+  padding-top: 56px;
+
+  .img-container {
+    $size: 180px;
+
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    border: 1px solid $GREY200;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 0 10px white;
+    }
+  }
+
+  a {
+    margin: 8px auto 6px;
+    font-size: 1em;
+    font-weight: 600;
+    color: $GREY800;
+
+    &:hover, &:focus, &:active {
+      color: white;
+    }
+  }
+
+  p {
+    margin-bottom: 16px;
+    height: 48px;
+    max-width: 320px;
+    color: $GREY700;
+  }
+}

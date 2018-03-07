@@ -130,7 +130,7 @@ header {
     }
 
     li {
-      width: 128px;
+      margin: 0 12px;
       @include flex(r, c, c);
 
       @media (max-width: 768px) {
