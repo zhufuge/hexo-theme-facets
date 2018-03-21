@@ -1,4 +1,4 @@
-$icons: menu, calendar, folder, arrow-left, arrow-right, arrow-up;
+$icons: menu, calendar, folder, arrow-left, arrow-right, arrow-up, x;
 
 @each $icon in $icons {
   i.icon-#{$icon} {
