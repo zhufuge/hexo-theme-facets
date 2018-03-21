@@ -1,0 +1,40 @@
+@import '../global/_all';
+
+#painting {
+  .content {
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
+    top: -24px;
+    border-radius: 12px;
+    max-width: 768px;
+    background: #ffffe7;
+    border: 1px solid #ddd;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      top: 0px;
+      border-radius: 0px;
+    }
+  }
+
+  .card {
+    width: 228px;
+    height: 184px;
+    margin: 8px 8px 24px 8px;
+    overflow: hidden;
+
+    img {
+      border-radius: 6px;
+      width: 228px;
+      height: 128px;
+    }
+
+    p {
+      margin: 6px 0;
+      color: $GREY800;
+    }
+  }
+}

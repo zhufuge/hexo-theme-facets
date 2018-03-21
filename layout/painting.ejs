@@ -1,0 +1,18 @@
+<!-- Paintings Content -->
+<div id="painting">
+
+  <%- partial('_partial/intro') %>
+  
+  <div class="content">
+    <%
+    JSON.parse(
+      site.pages.data[0]._content.match(/#\+BEGIN_SRC json([^]*)#\+END_SRC/)[1]
+    ).map(painting => {
+    %>
+      <div class="card">
+        <img alt="" src="<%= painting.src %>"/>
+        <p><%= painting.title %></p>
+      </div>
+    <% }) %>
+  </div>
+</div>

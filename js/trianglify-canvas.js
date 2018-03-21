@@ -21,7 +21,7 @@ const colors = [
   '#FDFFFE',
 ]
 
-const about_card = document.querySelector('.about-card')
+const intro = document.querySelector('.intro')
 const footer = document.querySelector('footer')
 
 var triCanvas = {}
@@ -39,11 +39,11 @@ function setTriCanvas(width) {
 
   triCanvas = pattern
 
-  if (about_card) {
-    about_card.style.background = 'url("' + pattern + '")'
-    about_card.classList.add('fadeIn')
+  if (intro) {
+    intro.style.background = 'url("' + pattern + '")'
+    intro.classList.add('fadeIn')
     setTimeout(function() {
-      about_card.classList.remove('fadeIn')
+      intro.classList.remove('fadeIn')
     }, 1000)
   }
 
