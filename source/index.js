@@ -404,6 +404,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__back_to_top__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__painting__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__painting___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__painting__);
+
 
 
 
@@ -891,8 +894,8 @@ const backNode = {
   },
   render: function() {
     this.node.style = this.style.display
-      ? "right:" + this.style.right + 'px;'
-      : "display: none"
+      ? 'right:' + this.style.right + 'px;'
+      : 'display: none'
   }
 }
 
@@ -919,6 +922,28 @@ non_uses.forEach(function(elem) {
   })
 })
 
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+const imgs = document.getElementsByClassName('picture')
+const container = document.querySelector('.photo-imager-container')
+const imgContainer = document.querySelector('.image-container img')
+
+
+for (const img of imgs) {
+  img.onclick = () => {
+    container.style = ''
+    imgContainer.src = img.src
+  }
+}
+
+
+document.querySelector('#painting .icon-x').onclick = () => {
+  container.style = 'display:none'
+}
 
 
 /***/ })

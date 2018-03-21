@@ -47,8 +47,8 @@ const backNode = {
   },
   render: function() {
     this.node.style = this.style.display
-      ? "right:" + this.style.right + 'px;'
-      : "display: none"
+      ? 'right:' + this.style.right + 'px;'
+      : 'display: none'
   }
 }
 

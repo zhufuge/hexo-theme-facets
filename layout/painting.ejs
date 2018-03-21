@@ -11,18 +11,17 @@
   
   <div class="content">
     <% paintings.map(painting => { %>
-      <div class="card" style="display:none">
-        <img alt="" src="<%= painting.src %>" />
+      <div class="card">
+        <img class="picture" alt="" src="<%= painting.src %>" />
         <p><%= painting.title %></p>
       </div>
     <% }) %>
   </div>
 
-  <div class="photo-imager-container">
+  <div class="photo-imager-container" style="display:none">
     <div class="image-container">
-      <img alt="" src="<%= paintings[0].src %>" />      
+      <img alt="" src="" />      
     </div>
     <i class="icon-x icon"></i>
   </div>
 </div>
-
