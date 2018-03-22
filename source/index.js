@@ -756,32 +756,24 @@ module.exports = isObjectLike;
 
 
 const header = document.querySelector('header')
-const container = header.children[0]
-const icon = container.querySelector('.menu')
-const menu = container.querySelector('ul')
+const container = header.querySelector('.container')
 
 const headerNode = {
   node: header,
   container: container,
-  icon: icon,
-  menu: menu,
   state: {
     style: false,
     scroll: window.scrollY,
-    menu: false,
-  },
-  init: function() {
-    this.icon.onclick = this.handleIconClick.bind(this)
   },
   onScroll: function(scroll) {
-    this.showStyle(scroll > 336 - 56)
+    this.show(scroll > 336 - 56)
 
     if (Math.abs(scroll - this.state.scroll) > 56) {
       this.animate(scroll > this.state.scroll)
       this.state.scroll = scroll
     }
   },
-  showStyle: function(style) {
+  show: function(style) {
     if (style === this.state.style) return
     if (style) {
       this.container.classList.add('header-shadow')
@@ -797,34 +789,38 @@ const headerNode = {
     this.state.style = style
   },
   animate: function(isOutUp) {
-    if (isOutUp) {
-      this.node.classList.replace('slideInDown', 'slideOutUp')
-      if (window.innerWidth < 767) this.hideMenu()
-    } else {
-      this.node.classList.replace('slideOutUp', 'slideInDown')
-    }
+    const slide = ['slideInDown', 'slideOutUp']
+    this.node.classList.replace(...(isOutUp ? slide : slide.reverse()))
   },
-  handleIconClick: function(event) {
-    if (this.state.menu) {
-      this.hideMenu()
-    } else {
-      this.menu.style = 'display: block;'
-      this.menu.classList.add('animated')
-      this.menu.classList.replace('fadeOut', 'fadeIn')
+}
+
+
+const nav = {
+  icon: container.querySelector('.menu'),
+  menu: container.querySelector('.nav-vertical>ul'),
+  status: false,
+  init: function() {
+    this.icon.onclick = (event) => {
       event.stopImmediatePropagation()
-      window.addEventListener('click', this.hideMenu.bind(this))
-      this.state.menu = true
+      if (this.status) {
+        this.hide()
+      } else {
+        this.show()
+      }
     }
   },
-  hideMenu: function() {
+  show: function() {
+    this.menu.style = 'display: block;'
+    this.menu.classList.replace('fadeOut', 'fadeIn')
+    window.addEventListener('click', this.hide.bind(this))
+    this.status = true
+  },
+  hide: function() {
     this.menu.classList.replace('fadeIn', 'fadeOut')
-    window.removeEventListener('click', this.hideMenu.bind(this))
-    setTimeout(
-      (function() { this.menu.style = 'display: none;' }).bind(this),
-      750
-    )
-    this.state.menu = false
-  }
+    window.removeEventListener('click', this.hide.bind(this))
+    setTimeout(() => { this.menu.style = 'display: none;' }, 750)
+    this.status = false
+  },
 }
 
 const logo = {
@@ -841,11 +837,12 @@ const logo = {
   },
 }
 
-headerNode.init()
+nav.init()
 logo.init()
 
 window.addEventListener('scroll', function() {
   headerNode.onScroll(window.scrollY)
+  nav.hide()
 })
 
 

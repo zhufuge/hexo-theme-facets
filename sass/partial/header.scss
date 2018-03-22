@@ -64,49 +64,58 @@ header {
     }
   }
 
-  .nav {
+  .nav-horizontal {
     @include flex(r, c, c);
     margin-right: 12px;
     height: 100%;
+
+    ul {
+      @include flex(r, c, c);
+      height: 100%;
+
+      a {
+        color: $GREY900;
+
+        &:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+
+      li {
+        margin: 0 12px;
+        @include flex(r, c, c);
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 
-  .menu {
-    @include flex(r, c, c);
-    border-radius: 6px;
-    padding: 3px;
-
-    &:hover {
-      background: rgba(#000, 0.1);
-    }
-
+  .nav-vertical {
     @media (min-width: 767px) {
       display: none;
     }
-  }
 
-  .feather-menu {
-    $size: 32px;
-    width: $size;
-    height: $size;
-  }
-
-  ul {
-    @include flex(r, c, c);
-    height: 100%;
-
-    a {
-      color: $GREY900;
+    .menu {
+      @include flex(r, c, c);
+      border-radius: 6px;
+      padding: 3px;
 
       &:hover {
-        color: #000;
-        text-decoration: underline;
+        background: rgba(#000, 0.1);
       }
     }
 
-    @media (max-width: 768px) {
+    .feather-menu {
+      $size: 32px;
+      width: $size;
+      height: $size;
+    }
+
+    ul {
       padding: 6px;
-      display: none;
-      height: auto;
       position: absolute;
       top: 56px;
       right: 28px;
@@ -122,36 +131,25 @@ header {
 
         &:hover, &:focus, &:active {
           color: $MAIN3;
-          text-decoration: underline;
           background: rgba(#000, 0.1);
         }
       }
-    }
 
-    li {
-      margin: 0 12px;
-      @include flex(r, c, c);
-
-      @media (max-width: 768px) {
+      li {
         padding: 12px;
-        justify-content: start;
       }
     }
-  }
 
-  .triangle {
-    z-index: -1;
-    position: absolute;
-    top: -6px;
-    right: 9px;
-    height: 18px;
-    width: 18px;
-    border-radius: 3px;
-    transform: rotate(45deg);
-    background: #FEFEC3;
-
-    @media (min-width: 767px) {
-      display: none;
+    .triangle {
+      z-index: -1;
+      position: absolute;
+      top: -6px;
+      right: 9px;
+      height: 18px;
+      width: 18px;
+      border-radius: 3px;
+      transform: rotate(45deg);
+      background: #FEFEC3;
     }
   }
 }

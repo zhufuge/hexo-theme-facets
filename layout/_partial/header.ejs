@@ -8,19 +8,26 @@
         's blog
       </a>
     </div>
-    <div class="nav">
-      <div class="menu">
-        <i data-feather="menu"></i>
-      </div>
-      <ul class="fadeOut">
+
+    <%
+    const navs = [
+      { name: 'HOME', url: '' },
+      { name: 'ARCHIVES', url: '/archives' },
+      { name: 'PAINTINGS', url: '/paintings' },
+    ]
+    %>
+    <div class="nav-horizontal">
+      <ul>
+        <% navs.forEach(function(item) { %>
+          <a href="<%- url_for(item.url) %>"><li><%= item.name %></li></a>
+        <% }) %>
+      </ul>
+    </div>
+
+    <div class="nav-vertical">
+      <div class="menu"><i data-feather="menu"></i></div>
+      <ul class="fadeOut animated" style="display:none">
         <div class="triangle"></div>
-        <%
-        const navs = [
-          { name: 'HOME', url: '' },
-          { name: 'ARCHIVES', url: '/archives' },
-          { name: 'PAINTINGS', url: '/paintings' },
-        ]
-        %>
         <% navs.forEach(function(item) { %>
           <a href="<%- url_for(item.url) %>"><li><%= item.name %></li></a>
         <% }) %>
