@@ -64,16 +64,15 @@
     }
   }
 
-  .icon {
+  .feather-x {
     position: fixed;
     top: 50px;
     right: 50px;
     z-index: 101;
-    background-color: $GREY600;
 
     $size: 3em;
     width: $size;
     height: $size;
-    mask-size: $size;
+    stroke: $GREY600;
   }
 }

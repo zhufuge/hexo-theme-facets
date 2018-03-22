@@ -4,7 +4,7 @@
       <a
         class="<%= page.prev ? '' : 'non-use' %>"
         href="<%= page.prev ? url_for(page.prev_link) : '#' %>">
-        <i class="icon-arrow-left icon"></i>
+        <i data-feather="arrow-left"></i>
         <span>NEWER</span>
       </a>
     </div>
@@ -13,7 +13,7 @@
         class="<%= page.next ? '' : 'non-use' %>"
         href="<%= page.next_link ? url_for(page.next_link) : '#' %>">
         <span>OLDER</span>
-        <i class="icon-arrow-right icon"></i>
+        <i data-feather="arrow-right"></i>
       </a>
     </div>
   <% } %>
@@ -21,7 +21,7 @@
   <% if (type == 'post') { %>
     <div class="previous">
       <a href="javascript:history.back()">
-        <i class="icon-arrow-left icon"></i>
+        <i data-feather="arrow-left"></i>
         <span>BACK</span>
       </a>
     </div>

@@ -17,5 +17,8 @@
     "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.7.0"
   }
 }

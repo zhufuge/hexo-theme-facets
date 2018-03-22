@@ -24,8 +24,8 @@
     font-weight: 600;
     color: $GREY900;
     border-radius: 12px;
-    .icon {
-      background: $GREY900;
+    .feather {
+      stroke: $GREY900;
     }
 
     &:hover, &:focus, &:active {
@@ -34,16 +34,16 @@
       border: 2px solid $hover-bcolor;
       color: $hover-color;
 
-      .icon {
-        background: $hover-color;
+      .feather {
+        stroke: $hover-color;
       }
     }
 
     &.non-use {
       color: rgba($GREY400, 0.6);
 
-      .icon {
-        background: rgba($GREY400, 0.6);
+      .feather {
+        stroke: rgba($GREY400, 0.6);
       }
 
       &:hover, &:focus, &:active {

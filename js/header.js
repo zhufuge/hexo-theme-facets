@@ -1,9 +1,9 @@
 import triCanvas from './trianglify-canvas'
 
-const header = document.querySelector('header'),
-      container = header.children[0],
-      icon = container.querySelector('.menu'),
-      menu = container.querySelector('ul')
+const header = document.querySelector('header')
+const container = header.children[0]
+const icon = container.querySelector('.menu')
+const menu = container.querySelector('ul')
 
 const headerNode = {
   node: header,

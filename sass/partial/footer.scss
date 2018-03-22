@@ -21,8 +21,8 @@ footer {
   border: 2px solid $color;
   border-radius: 12px;
 
-  .icon {
-    background: $color;
+  .feather-arrow-up {
+    stroke: $color;
   }
 
   &:hover {
@@ -30,8 +30,8 @@ footer {
     background: $hover-color;
     border-radius: 12px;
 
-    .icon {
-      background: $MAINB;
+    .feather-arrow-up {
+      stroke: $MAINB;
     }
   }
 }

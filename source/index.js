@@ -140,8 +140,8 @@ window.addEventListener('resize', __WEBPACK_IMPORTED_MODULE_0_lodash_debounce___
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(2),
-    now = __webpack_require__(6),
-    toNumber = __webpack_require__(9);
+    now = __webpack_require__(7),
+    toNumber = __webpack_require__(10);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -370,7 +370,7 @@ module.exports = isObject;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(7);
+var freeGlobal = __webpack_require__(8);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -399,13 +399,17 @@ module.exports = Symbol;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__trianglify_canvas__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__back_to_top__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pagination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__painting__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__painting___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__painting__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__feather_icons__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__feather_icons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__feather_icons__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trianglify_canvas__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__back_to_top__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__painting__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__painting___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__painting__);
+
+
 
 
 
@@ -415,6 +419,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports) {
+
+feather.replace()
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(3);
@@ -443,7 +454,7 @@ module.exports = now;
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -451,10 +462,10 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var g;
@@ -481,11 +492,11 @@ module.exports = g;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(2),
-    isSymbol = __webpack_require__(10);
+    isSymbol = __webpack_require__(11);
 
 /** Used as references for various `Number` constants. */
 var NAN = 0 / 0;
@@ -553,11 +564,11 @@ module.exports = toNumber;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
-    isObjectLike = __webpack_require__(14);
+var baseGetTag = __webpack_require__(12),
+    isObjectLike = __webpack_require__(15);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -588,12 +599,12 @@ module.exports = isSymbol;
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(4),
-    getRawTag = __webpack_require__(12),
-    objectToString = __webpack_require__(13);
+    getRawTag = __webpack_require__(13),
+    objectToString = __webpack_require__(14);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -622,7 +633,7 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(4);
@@ -674,7 +685,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -702,7 +713,7 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /**
@@ -737,17 +748,17 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__trianglify_canvas__ = __webpack_require__(0);
 
 
-const header = document.querySelector('header'),
-      container = header.children[0],
-      icon = container.querySelector('.menu'),
-      menu = container.querySelector('ul')
+const header = document.querySelector('header')
+const container = header.children[0]
+const icon = container.querySelector('.menu')
+const menu = container.querySelector('ul')
 
 const headerNode = {
   node: header,
@@ -839,7 +850,7 @@ window.addEventListener('scroll', function() {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -911,7 +922,7 @@ window.addEventListener('resize', __WEBPACK_IMPORTED_MODULE_0_lodash_debounce___
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 const non_uses = document.querySelectorAll('a.non-use')
@@ -925,7 +936,7 @@ non_uses.forEach(function(elem) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 const imgs = document.getElementsByClassName('picture')
@@ -940,9 +951,11 @@ for (const img of imgs) {
   }
 }
 
-
-document.querySelector('#painting .icon-x').onclick = () => {
-  container.style = 'display:none'
+const closeButton = document.querySelector('#painting .feather-x')
+if (closeButton) {
+  closeButton.onclick = () => {
+    container.style = 'display:none'
+  }
 }
 
 

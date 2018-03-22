@@ -10,7 +10,9 @@ for (const img of imgs) {
   }
 }
 
-
-document.querySelector('#painting .icon-x').onclick = () => {
-  container.style = 'display:none'
+const closeButton = document.querySelector('#painting .feather-x')
+if (closeButton) {
+  closeButton.onclick = () => {
+    container.style = 'display:none'
+  }
 }

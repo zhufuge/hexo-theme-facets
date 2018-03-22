@@ -4,13 +4,13 @@
   </a>
   <div class="post-attr">
     <div class="post-date">
-      <i class="icon-calendar icon"></i>
+      <i data-feather="calendar"></i>
       <span>
         <%= post.date.format(config.date_format) %>
       </span>
     </div>
     <div class="post-cates">
-      <i class="icon-folder icon"></i>
+      <i data-feather="folder"></i>
       <div class="cates">
         <%- list_categories(post.categories, {
           show_count: false,
